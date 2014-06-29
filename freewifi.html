@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 100% }
+    </style>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+      <script>
+		  function initialize() {
+			var mercadoPublico = new google.maps.LatLng(-30.027985,-51.227672);//ok
+			var redencao = new google.maps.LatLng(-30.036268,-51.216044);//ok
+			var usina = new google.maps.LatLng(-30.034045,-51.241176);//ok
+			var parcao = new google.maps.LatLng(-30.02707,-51.200829);//ok
+			var pcalfandega = new google.maps.LatLng(-30.0304254,-51.2314222);//ok
+			var largoglenio = new google.maps.LatLng(-30.0280059,-51.227634);//ok
+			var praca15 = new google.maps.LatLng(-30.0286114,-51.2271009);//ok
+			var IAPIskate = new google.maps.LatLng(-30.017645, -51.180078);//ok
+			var marinha = new google.maps.LatLng(-30.0508026,-51.2299175);//ok
+			//Praça Montevidéo, n.º 10   CEP:90010-170
+			var gp = new google.maps.LatLng(-30.028236,-51.228447);//ok
+			var pmpa = new google.maps.LatLng(-30.028116,-51.228435);//ok
+			var procuradoriaGeral = new google.maps.LatLng(-30.040237,-51.204095);//ok
+			var procempa = new google.maps.LatLng(-30.047425, -51.215717);//ok
+			var eptc = new google.maps.LatLng(-30.047655, -51.217208);//ok
+			var HPresidentVargas = new google.maps.LatLng(-30.029413,-51.214928);//ok
+            var hps = new google.maps.LatLng(-30.0368054,-51.2094262);//ok
+            var santaCasa = new google.maps.LatLng(-30.030722,-51.222596);//ok
+
+			
+			var mapOptions = {
+			  center: new google.maps.LatLng(-30.1008231,-51.1589488),
+			  zoom: 12,
+			  mapTypeId: google.maps.MapTypeId.ROADMAP			  
+			}
+
+			var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+			
+			var image = 'http://i.imgur.com/NVWUk3C.png';
+			
+			var marker = new google.maps.Marker({
+			position: mercadoPublico,
+			map: map,
+			icon: image,
+			title: 'Mercado Público'
+			});
+			
+			var marker = new google.maps.Marker({
+			position: redencao,
+			map: map,
+			icon: image,
+			title: 'Redenção'
+			});
+			
+			var marker = new google.maps.Marker({
+			position: usina,
+			map: map,
+			icon: image,
+			title: 'Usina do Gasômetro'
+			});
+			
+			var marker = new google.maps.Marker({
+			position: parcao,
+			map: map,
+			icon: image,
+			title: 'Parque Moinho de Ventos'
+			});
+			
+			var marker = new google.maps.Marker({
+			position: pcalfandega,
+			map: map,
+			icon: image,
+			title: 'Praça da Alfândega'
+			});
+			
+			var marker = new google.maps.Marker({
+			position: largoglenio,
+			map: map,
+			icon: image,
+			title: 'Largo Glênio Peres'
+			});
+			
+			var marker = new google.maps.Marker({
+			position: praca15,
+			map: map,
+			icon: image,
+			title: 'Chalé Paraça XV'
+			});
+			
+			var marker = new google.maps.Marker({
+			position: IAPIskate,
+			map: map,
+			icon: image,
+			title: 'IAPI Skate Park'
+			});
+			
+			var marker = new google.maps.Marker({
+			position: marinha,
+			map: map,
+			icon: image,
+			title: 'Parque Marinha do Brasil'
+			});
+			
+			var marker = new google.maps.Marker({
+			position: gp,
+			map: map,
+			icon: image,
+			title: 'Gabinete do Prefeito'
+			});
+			
+			var marker = new google.maps.Marker({
+			position: pmpa,
+			map: map,
+			icon: image,
+			title: 'Prefeitura Municipal de Porto Alegre'
+			});
+			
+			var marker = new google.maps.Marker({
+			position: procuradoriaGeral,
+			map: map,
+			icon: image,
+			title: 'Procuradoria Geral do Município'
+			});
+			
+			var marker = new google.maps.Marker({
+			position: procempa,
+			map: map,
+			icon: image,
+			title: 'PROCEMPA'
+			});
+			
+			var marker = new google.maps.Marker({
+			position: eptc,
+			map: map,
+			icon: image,
+			title: 'EPTC'
+			});
+			
+			var marker = new google.maps.Marker({
+			position: HPresidentVargas,
+			map: map,
+			icon: image,
+			title: 'Hospital Presidente Vargas'
+			});
+			
+			var marker = new google.maps.Marker({
+			position: hps,
+			map: map,
+			icon: image,
+			title: 'Hospital de Pronto Socorro'
+			});
+			
+			var marker = new google.maps.Marker({
+			position: santaCasa,
+			map: map,
+			icon: image,
+			title: 'Hospital Santa Casa'
+			});
+						
+}
+		google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body onload="initialize()">
+    <div id="map_canvas" style="width:100%; height:100%"></div>
+  </body>
+</html>
